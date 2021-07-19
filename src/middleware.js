@@ -75,7 +75,7 @@ module.exports = function cacheRenderer(nuxt, config) {
             return renderRoute(route, context)
                 .then(function(result) {
                     if (!result.error && !result.redirected) {
-                        cache.setAsync(cacheKey, serialize(result));
+                        cache.setAsync(cacheKey, serialize(result), { ttl: config.cache.store.ttl });
                     }
                     return result;
                 });
