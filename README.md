@@ -4,11 +4,11 @@
 Cache middleware for nuxt's SSR rendering.
 
 ## Setup
-```npm install nuxt-ssr-cache```
+```npm install shopper-nuxt-ssr-cache```
 
 or
 
-```yarn add nuxt-ssr-cache```
+```yarn add shopper-nuxt-ssr-cache```
 
 then inside your `nuxt.config.js` add cache config:
 
@@ -22,7 +22,7 @@ module.exports = {
   // ....
 
   modules: [
-      'nuxt-ssr-cache',
+      'shopper-nuxt-ssr-cache',
   ],
   cache: {
     // if you're serving multiple host names (with differing
@@ -44,10 +44,10 @@ module.exports = {
       // to cache only root route, use a regular expression
       /^\/$/
     ],
-    
+
     key(route, context) {
       // custom function to return cache key, when used previous
-      // properties (useHostPrefix, pages) are ignored. return 
+      // properties (useHostPrefix, pages) are ignored. return
       // falsy value to bypass the cache
     },
 
